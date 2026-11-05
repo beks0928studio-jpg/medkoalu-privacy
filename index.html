@@ -6,7 +6,7 @@
 <meta name="referrer" content="no-referrer">
 <title>Политика конфиденциальности MedKoalu</title>
 <style>
-  :root { --bg: #EDF6FF; --ink: #0E1A2B; --ink-muted: #53647C; --accent: #3B82F6; --line: rgba(14,26,43,0.12); }
+  :root { --bg: #EDF6FF; --ink: #0E1A2B; --ink-muted: #53647C; --accent: #3B82F6; }
   body { margin: 0; background: var(--bg); color: var(--ink); font-family: -apple-system, system-ui, "SF Pro Text", "Helvetica Neue", Arial, sans-serif; font-size: 16px; line-height: 1.6; padding-block: max(40px, env(safe-area-inset-top, 0px)) 56px; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
   main { max-width: 720px; margin: 0 auto; }
   h1 { font-size: clamp(28px, 5vw, 38px); line-height: 1.15; letter-spacing: -0.015em; margin: 0 0 8px; text-wrap: balance; }
@@ -19,17 +19,15 @@
   a { color: var(--accent); transition: transform 0.12s ease, opacity 0.12s ease; }
   a:active { transform: scale(0.97); opacity: 0.7; }
   .back { display: inline-block; margin-bottom: 24px; font-size: 15px; text-decoration: none; }
-  .lang { border-top: 1px solid var(--line); margin-top: 48px; padding-top: 8px; }
-  details { margin-top: 32px; background: rgba(255,255,255,0.6); border-radius: 18px; padding: 4px 22px; }
-  summary { cursor: pointer; font-weight: 650; padding: 16px 0; color: var(--ink); }
-  details[open] summary { border-bottom: 1px solid var(--line); margin-bottom: 14px; }
-  details > div { padding-bottom: 18px; }
   :focus-visible { outline: 3px solid #70B6FF; outline-offset: 3px; border-radius: 6px; }
+  html[lang="en"] [data-l="ru"], html[lang="ru"] [data-l="en"] { display: none !important; }
 </style>
+<script>(function(){var l=String((navigator.languages&&navigator.languages[0])||navigator.language||'ru').toLowerCase();var ru=/^(ru|kk|uk|be)(-|$)/.test(l);var h=document.documentElement;h.lang=ru?'ru':'en';document.title=ru?'Политика конфиденциальности MedKoalu':'MedKoalu Privacy Policy';})();</script>
 </head>
 <body>
 <main>
 <a class="back" href="https://medkoalu.app">← MedKoalu</a>
+<div data-l="ru">
 <h1>Политика конфиденциальности MedKoalu</h1>
 <p>Версия от 30.10.2026. Контакт: <a href="mailto:beks0928.studio@gmail.com">beks0928.studio@gmail.com</a></p>
 <h2>Коротко</h2>
@@ -39,17 +37,11 @@
 <h2>Что уходит с телефона</h2>
 <ol>
 <li>Аккаунт и вход. Когда нужна функция с сервером (друзья, семья, почта, отчёт), приложение создаёт для тебя анонимный аккаунт: без телефона и пароля. Если ты входишь через Apple или Google, мы получаем твою почту (у Apple это может быть скрытый адрес) и идентификатор аккаунта. Для входа через Apple мы дополнительно храним токен, нужный, чтобы при удалении аккаунта отозвать доступ приложения в твоём Apple ID.</li>
-
 <li>Друзья (только если ты создал профиль и дал согласие). На наш сервер отправляются: ник, длина серии, число дней, отметка «сегодня всё выпито» и твой код друга; их видят твои друзья. Названия лекарств, дозы, время приёма и остаток не отправляются никогда.</li>
-
 <li>Поиск по штрих-коду. Номер штрих-кода вместе с твоим IP-адресом отправляется в открытые базы Open Food Facts и UPCitemdb, чтобы найти название: по номеру эти сервисы могут узнать, какой товар ты сканируешь. Фото упаковки отправляется, только если название не нашлось на телефоне и ты дал согласие (см. раздел «Камера»).</li>
-
 <li>Почта (только если ты её указал, этот шаг можно пропустить). Почта сохраняется на нашем сервере, чтобы подтвердить её по ссылке из письма. Если ты отметил галочку «Присылать ежемесячный отчёт», мы раз в месяц присылаем письмо с итогами: сколько доз по расписанию и сколько отмечено, число идеальных дней и серия. Для этого эти числа хранятся на нашем сервере до удаления аккаунта. Названия лекарств в письма и на сервер для отчёта не попадают. Письма отправляет почтовый сервис (Google Gmail или сервис рассылок). Отключить отчёт можно переключателем в настройках или ссылкой «Отписаться» в письме. Телефон мы не просим никогда.</li>
-
 <li>Общая семья (только если ты создал семью или вступил по приглашению и дал отдельное согласие). Лекарства (названия, дозировки, расписание, курсы, остаток) и отметки приёма хранятся на нашем сервере и видны всем участникам твоей семьи, включая детей. По умолчанию участники могут менять и отмечать твои лекарства: это можно запретить для каждого человека или для всех сразу в настройках семьи. Если ты удаляешь лекарство, его данные и отметки сразу стираются с сервера. Если ты выходишь из семьи или тебя убирают, все твои лекарства стираются с сервера. У тех, кто не в семье, лекарства остаются только на телефоне.</li>
-
 <li>Покупки. Платёжные данные мы не видим. RevenueCat получает идентификатор твоего аккаунта и сведения о покупке, чтобы открыть платные функции.</li>
-
 <li>Уведомления-напоминания создаются на самом телефоне.</li>
 </ol>
 <h2>Камера</h2>
@@ -62,10 +54,9 @@
 <p>Приложение не предназначено для детей младше 13 лет, и мы сознательно не собираем их данные. Роль «ребёнок» в общей семье для тех, кому исполнилось 13 лет. Для младших используй профили близких: они остаются только на телефоне родителя. Детям до 18 лет лекарства должен вносить родитель или опекун.</p>
 <h2>Изменения</h2>
 <p>Если политика изменится, новая версия появится в приложении с новой датой.</p>
-<details>
-<summary>English version</summary>
-<div>
-<h2>Privacy Policy for MedKoalu</h1>
+</div>
+<div data-l="en">
+<h1>Privacy Policy for MedKoalu</h1>
 <p>Version of 30.10.2026. Contact: <a href="mailto:beks0928.studio@gmail.com">beks0928.studio@gmail.com</a></p>
 <h2>In short</h2>
 <p>MedKoalu keeps your medications and intake marks on your phone. They reach our server only if you join a shared family. Some other data (nickname, streak, email, monthly totals) goes to the server when you turn on the matching feature yourself: everything is listed below. We show no ads, sell no data and do not track you.</p>
@@ -74,17 +65,11 @@
 <h2>What leaves the phone</h2>
 <ol>
 <li>Account and sign-in. When a feature needs the server (friends, family, email, report) the app creates an anonymous account for you: no phone number or password. If you sign in with Apple or Google we receive your email (Apple may give a hidden address) and an account ID. For Apple sign-in we also keep a token that lets us revoke the app&#x27;s access in your Apple ID when you delete the account.</li>
-
 <li>Friends (only if you create a profile and consent). Sent to our server: nickname, streak length, day count, a &quot;done today&quot; flag and your friend code; your friends see them. Medication names, doses, times and pill counts are never sent.</li>
-
 <li>Barcode lookup. The barcode number is sent with your IP address to the open databases Open Food Facts and UPCitemdb to find a name: from the number these services can tell which product you scan. A pack photo is sent only when the name is not found on the phone and you have agreed (see Camera).</li>
-
 <li>Email (only if you give one, this step can be skipped). The email is stored on our server to confirm it with a link in a message. If you tick &quot;Send a monthly report&quot;, once a month we send a message with totals: doses scheduled and marked, perfect days and streak. For this the numbers are kept on our server until you delete the account. Medication names never reach the messages or the server for the report. Messages are sent by a mail service (Google Gmail or a mailing service). You can turn the report off with the switch in Settings or the &quot;Unsubscribe&quot; link in the message. We never ask for a phone number.</li>
-
 <li>Shared family (only if you create a family or join by invitation and give separate consent). Medications (names, doses, schedules, courses, pill counts) and intake marks are stored on our server and visible to everyone in your family, including children. By default members can change and mark your medications: you can forbid this for each person or for everyone in the family settings. When you delete a medication, its data and marks are erased from the server at once. If you leave the family or are removed, all your medications are erased from the server. For people who are not in a family, medications stay on the phone only.</li>
-
 <li>Purchases. We never see payment details. RevenueCat receives your account ID and purchase details to unlock paid features.</li>
-
 <li>Reminder notifications are created on the phone itself.</li>
 </ol>
 <h2>Camera</h2>
@@ -98,7 +83,6 @@
 <h2>Changes</h2>
 <p>If this policy changes, the new version will appear in the app with a new date.</p>
 </div>
-</details>
 </main>
 </body>
 </html>
